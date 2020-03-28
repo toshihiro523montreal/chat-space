@@ -1,40 +1,53 @@
 .main_chat
   .main_chat__group-info
-    .main_chat__group-info__box
-      .main_chat__group-info__box__left-text
-        group b
-      .main_chat__group-info__box__left-name
-        Member : ssss
+    .main_chat__group-info-box
+      .main_chat__group-info-box__left-text
+        techcamp
+      .main_chat__group-info-box__left-name
+        Member : dddd
     =link_to "#" do
-      .main_chat__group-info__box__right
-        %p.main_chat__group-info__box__right-btn
+      .main_chat__group-info-box__right
+        %p.main_chat__group-info-box__right-btn
           Edit
   .main_chat__message-list
-    .main_chat__message-list__message__box
-      .main_chat__message-list__message__box__header
-        .main_chat__message-list__message__box__header__name
-          ssss
-        .main_chat__message-list__message__box__header__date
-          2020/03/27(Fri) 14:53:29
-      .main_chat__message-list__message__box__body
-        あああ
-    .main_chat__message-list__message__box
-      .main_chat__message-list__message__box__header
-        .main_chat__message-list__message__box__header__name
-          ssss
-        .main_chat__message-list__message__box__header__date
-          2020/03/27(Fri) 14:54:19
-      .main_chat__message-list__message__box__body
-        カカか
+    .main_chat__message-list__message-box
+      .main_chat__message-list__message-box__header
+        .main_chat__message-list__message-box__header__name
+          techcamp
+        .main_chat__message-list__message-box__header__time
+          2020/03/27(Fri) 20:14:32
+      .main_chat__message-list__message-box__body
+        dddd
+    .main_chat__message-list__message-box
+      .main_chat__message-list__message-box__header
+        .main_chat__message-list__message-box__header__name
+          techcamp
+        .main_chat__message-list__message-box__header__time
+          2020/03/27(Fri) 20:14:32
+      .main_chat__message-list__message-box__body
+        dddd
       
   .main_chat__message-form
     .main_chat__message-form__top-items
       .main_chat__message-form__top-items__input-box
-        type a message
-        .main_chat__message-form__top-items__input-box__text
-        .main_chat__message-form__top-items__input-box__img
-          %p.main_chat__message-form__top-items__input-box__img      
-            = link_to "#" do
-              = icon('far', 'image')
-      .main_chat__message-form__top-items__submit-btm
-        Send
+        %form.new_message
+          .input-box
+            %input{:placeholder => "type a message", :class => "input-box__text", :type => "text", :neme => "message[content]", :id => "message_content"}
+            %label.input-box__img               
+              %i.fa.fa-image
+              %input{:class => "input-box__img__file", :type => "file", :name => "message[image]", :id => "message_image"} 
+          %input{:type => "submit", :name => "commit", :value => "Send", :class => "submit-btn"}   
+      
+       
+       
+      -#   type a message
+      -#   .main_chat__message-form__top-items__input-box__text
+      -#   .main_chat__message-form__top-items__input-box__img
+      -#     -# .main_chat__message-form__top-items__input-box__img
+      -#     %label{class: "input-box__img"}  
+      -#       = link_to "#" do
+      -#         = icon('far', 'image')
+      -# .main_chat__message-form__top-items__submit-btm
+      -#   Send
+
+

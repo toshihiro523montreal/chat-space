@@ -1,24 +1,24 @@
 .side_bar {
   height: 100vh;
   width: 300px;
-    &__user-name-area {
+    &__user-name__area {
       height: 100px;
       background-color: #253241;
       display: flex;
       justify-content: center;
       align-items: center;
-        &-box {
+        &__box {
           display: flex;
           justify-content: space-between;
           background-color: #253241;
           height: 20px;
           width: 260px;
-          &-text {      
+          &__text {      
             color: white;
             font-weight: bold;
             line-height: 20px;
           }
-          &-icon {
+          &__icon {
             display: flex;
             justify-content: flex-end;
             line-height: 20px;
@@ -32,19 +32,20 @@
         }
     }
     &__group-list {
+      padding: 20px 20px;
       height: calc(100vh - 100px);
       background-color: #2f3e51;
-      &-body {
-        margin: 0px 20px;
-        padding: 20px 0px 20px 0px;
-        width: 260px;
-        &-title {
+      overflow: scroll;
+      &__body {
+        text-decoration: none;
+        color: white;
+        // margin: 0px 0p 40px 0pxx;
+        padding: 0px 0px 40px 0px;
+        &__title {
           font-size: 15px;
-          color: #ffffff;
         }
-        &-text {
+        &__text {
           font-size: 11px;
-          color: #ffffff;
           padding-top: 5px;
         }
       }
