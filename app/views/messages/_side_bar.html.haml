@@ -1,0 +1,19 @@
+.side_bar
+  .side_bar__user-name
+    .side_bar__user-name__area
+      .side_bar__user-name__area__box
+        %p.side_bar__user-name__area__box__text 
+          name
+        %p.side_bar__user-name__area__box__icon      
+          = link_to "#" do
+            = icon('far', 'edit')          
+          = link_to "#" do
+            = icon('fas', 'cog')            
+
+  .side_bar__group-list
+    = link_to "#", class:"side_bar__group-list__body" do
+      .side_bar__group-list__body
+        %p.side_bar__group-list__body__title
+          techcamp
+        %p.side_bar__group-list__body__text
+          まだメッセージがありません
