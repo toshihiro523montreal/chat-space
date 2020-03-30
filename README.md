@@ -15,7 +15,7 @@
 - has_many :groups_users
 
 
-## message テーブル
+## messages テーブル
 |Column|Type|Options|
 |------|----|-------|
 |body|text|
@@ -28,7 +28,7 @@
 - belongs_to :group
 
 
-## group テーブル
+## groups テーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, unique: true|
@@ -39,7 +39,7 @@
 - has_many: groups_users
 
 
-## groups_usersテーブル
+## group_usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|

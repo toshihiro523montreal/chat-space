@@ -1,52 +1,55 @@
 .side_bar {
   height: 100vh;
   width: 300px;
-    &__user-name__area {
-      height: 100px;
-      background-color: #253241;
+  &__user-name__area {
+    height: 100px;
+    background-color: #253241;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__box {
       display: flex;
-      justify-content: center;
-      align-items: center;
-        &__box {
-          display: flex;
-          justify-content: space-between;
-          background-color: #253241;
-          height: 20px;
-          width: 260px;
-          &__text {      
-            color: white;
-            font-weight: bold;
-            line-height: 20px;
-          }
-          &__icon {
-            display: flex;
-            justify-content: flex-end;
-            line-height: 20px;
-            font-weight: bold;
-            width: 60px;
-            a {
-              color: white;
-              margin-left: 5px;
-              }
-          }
-        }
-    }
-    &__group-list {
-      padding: 20px 20px;
-      height: calc(100vh - 100px);
-      background-color: #2f3e51;
-      overflow: scroll;
-      &__body {
-        text-decoration: none;
+      justify-content: space-between;
+      background-color: #253241;
+      height: 20px;
+      width: 260px;
+      &__text {      
         color: white;
-        padding: 0px 0px 40px 0px;
-        &__title {
-          font-size: 15px;
-        }
-        &__text {
-          font-size: 11px;
-          padding-top: 5px;
+        font-weight: bold;
+        line-height: 20px;
+      }
+      &__icon {
+        display: flex;
+        justify-content: flex-end;
+        line-height: 20px;
+        font-weight: bold;
+        width: 60px;
+        a {
+          color: white;
+          margin-left: 5px;
         }
       }
     }
+  }
+  &__group-list {
+    padding: 20px 20px;
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    overflow: scroll;
+    a {
+      text-decoration: none;
+    }
+    &__body {
+      text-decoration: none;
+      color: white;
+      padding: 0px 0px 40px 0px;
+      &__title {
+        font-size: 15px;
+      }
+      &__text {
+        font-size: 11px;
+        padding-top: 5px;
+      }
+    }
+  }
 }
