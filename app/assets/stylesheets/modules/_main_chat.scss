@@ -22,51 +22,50 @@
       }
     }
     &-box__right {
-      font-size: 16px;
       height: 40px;
       line-height: 40px;
+      padding: 0 20px;
+      margin-top: 30px;
+      border: solid 1px #38aef0;
+      position: absolute;
+      right: 40px;
+    p {
       color: #38aef0;
-      margin: 30px 40px 0 0;
-      border: 1px solid #38aef0;
-      padding: 0px 20px;
-      border-color: #38aef0;
-      p {
-        color: #38aef0;
-        text-decoration: none;
-      }
+      text-decoration: none;
+    }
     }
   }
   &__message-list {
+    height: calc(100vh - 190px);
     padding: 46px 40px;
     background-color: #fafafa;
-    height: calc(100vh - 190px);
     overflow: scroll;
-    &__message-box {
-      height: 105px;
+    &__message {
+      padding-bottom: 40px;
       &__header {
+        // padding-top: 20px;
         display: flex;
         margin-bottom: 10px;
-        height: 23px;
         &__name {
-          font-weight: bold;
-          color: #333333;
+          color: #434a54;
           font-size: 16px;
+          font-weight: bold;
         }
-        &__time {
-          margin-left: 10px;
+        &__date {
           color: #999999;
           font-size: 12px;
+          margin-left: 10px;
         }
       }
       &__body {
-        margin-bottom: 10px;
-        height: 23px;
-        color: #434A54;
+        color: #434a54;
         font-size: 14px;
-        align-items: flex-end;
+        margin-bottom: 10px;
       }
     }
   }
+
+
   &__form {
       height: 90px;
       padding: 20px 40px;
@@ -91,7 +90,6 @@
           right: 9px;
           cursor: pointer;
           .area__image__file {
-            position: absolute;
             display: none;
           }
         }
