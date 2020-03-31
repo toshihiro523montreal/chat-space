@@ -70,44 +70,45 @@
   &__form {
     height: 90px;
     padding: 20px 40px;
-    display: flex;
+    // display: flex;
     background-color: #ddd;
     &__input-box {
-      display: flex;
-      &__area {
-        .new_message {
-            display: flex;
-            // height: 50px;
-            
-            // color: #434a54;
-            // border-style: none;
-            background-color: white;
-            // position: relative;
-          &__text {
-            // padding: 0 40px 0 10px;
-            width: 100%;
-            height: 50px;
-          }
-          &__image {
-            font-size: 1.5rem;
-            position: absolute;
-            top: 7px;
-            right: 9px;
-            cursor: pointer;
-            &__file {
-            display: none;
-            }
-          }
+      // display: flex;
+      .new_message {
+          // display: flex;
+          // height: 50px;
+          
+          // color: #434a54;
+          // border-style: none;
+          background-color: white;
+          // position: relative;
+        &__text {
+          // padding: 0 40px 0 10px;
+          // width: 100%;
+          // height: 50px;
         }
       }
-      &__submit-btn {
-          width: 100px;
-          height: 50px;
-          padding: 0 30px;
-          margin-left: 15px;
-          background-color: #38aef0;
-          color: white;
-          cursor: pointer;
+        &__area {
+          &__area__image {
+        // font-size: 1.5rem;
+        // position: absolute;
+        // top: 7px;
+        // right: 9px;
+        // cursor: pointer;
+        // display: none;
+        // &__submit-btn {
+        //   background-color: black;
+        // display: none;
+          }
+        }
+      &__submit {
+        width: 100px;
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: #38aef0;
+        color: white;
+        cursor: pointer;
       }
     }
   }

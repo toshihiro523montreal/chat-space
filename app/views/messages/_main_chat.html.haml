@@ -19,16 +19,35 @@
       .main_chat__message-list__message-box__body
         dddd
   .main_chat__form
-    .main_chat__form__input-box
-      .main_chat__form__input-box__area
-        = form_for [@group, @message] do |f|
-          = f.text_field :content, class: 'main_chat__form__input-box__area__text', placeholder: 'type a message'
-          = f.label :image, class: 'main_chat__form__input-box__area__image' do
-            = icon('far', 'image')
-            = f.file_field :image, class: 'hidden'
-          = f.submit 'Send', class: 'main_chat__form__input-box__submit-btn'
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'new_message__text', placeholder: 'type a message'
+      .main_chat__form__new_message__area
+        = f.label :image, class: 'main_chat__form__new_message__area__image' do
+          = icon('far', 'image')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'submit'
 
-          
+
+
+      -#   .form
+      -# = form_for [@group, @message] do |f|
+      -#   = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      -#   .form__mask
+      -#     = f.label :image, class: 'form__mask__image' do
+      -#       = icon('fas', 'image', class: 'icon')
+      -#       = f.file_field :image, class: 'hidden'
+      -#   = f.submit 'Send', class: 'form__submit'  
+
+
+
+
+
+
+
+
+
+
+      -# main_chat__form__input-box__area
       -#   %input{type: "text", class: "main_chat__form__input-box__area__text", placeholder: "type a message"}
       -#   %label{class: "main_chat__form__input-box__area__image"}
       -#     %input{type: "file", class: "main_chat__form__input-box__area__image__file"}
