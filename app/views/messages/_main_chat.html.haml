@@ -2,27 +2,25 @@
   .main_chat__group-info
     .main_chat__group-info-box
       .main_chat__group-info-box__left-text
-        techcamp
+        = @group.name
       .main_chat__group-info-box__left-name
-        Member : dddd
-    =link_to "#" do
+        Member :
+        - @group.users.each do |u|
+          = u.name
+    = link_to edit_group_path(@group.id) do
       .main_chat__group-info-box__right
-        %p.main_chat__group-info-box__right-btn
-          Edit
+        Edit
+        .main_chat__group-info-box__right-btn
   .main_chat__message-list
-    .main_chat__message-list__message-box
-      .main_chat__message-list__message-box__header
-        .main_chat__message-list__message-box__header__name
-          techcamp
-        .main_chat__message-list__message-box__header__time
-          2020/03/27(Fri) 20:14:32
-      .main_chat__message-list__message-box__body
-        dddd
+    .messages
+      = render @messages
   .main_chat__form
-    .main_chat__form__input-box
-      .main_chat__form__input-box__area
-        %input{type: "text", class: "main_chat__form__input-box__area__text", placeholder: "type a message"}
-        %label{class: "main_chat__form__input-box__area__image"}
+    = form_for [@group, @message] do |f|
+      .main_chat__form__input-box
+        = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+        = f.label :image, class: 'area__image' do
           = icon('far', 'image')
-          %input{type: "file", class: "main_chat__form__input-box__area__image__file"}
-      %input{type: "submit", class: "main_chat__form__input-box__submit-btn", value: "Send"} 
+          = f.file_field :image, class: 'area__image__file'
+      = f.submit 'Send', class: 'submit-btn'
+  
+
