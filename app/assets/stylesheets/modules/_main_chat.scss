@@ -29,11 +29,9 @@
       border: solid 1px #38aef0;
       position: absolute;
       right: 40px;
-    p {
       color: #38aef0;
       text-decoration: none;
-    }
-    }
+      }
   }
   &__message-list {
     height: calc(100vh - 190px);
@@ -43,7 +41,6 @@
     &__message {
       padding-bottom: 40px;
       &__header {
-        // padding-top: 20px;
         display: flex;
         margin-bottom: 10px;
         &__name {
