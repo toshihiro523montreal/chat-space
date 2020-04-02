@@ -42,7 +42,7 @@ $(function(){
 $('#new_message').on('submit', function(e){
  e.preventDefault();
  var formData = new FormData(this);
- $('#main_chat__form__submit-btn').removeAttr('data-disable-with');
+ $('.submit-btn').removeAttr('data-disable-with');
  var url = $(this).attr('action')
  $.ajax({
    url: url,
@@ -56,11 +56,10 @@ $('#new_message').on('submit', function(e){
     var html = buildHTML(data);
     $('.main_chat__message-list').append(html);
     $('form')[0].reset();
-    $('.main_chat').animate({ scrollTop: $('.main_chat__message-list')[0].scrollHeight});
+    $('.main_chat__message-list').animate({ scrollTop: $('.main_chat__message-list')[0].scrollHeight});
   })
     .fail(function() {
       alert('メッセージを送信できません');
     });
-    return false;
   })
 });
