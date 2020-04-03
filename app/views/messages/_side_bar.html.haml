@@ -3,11 +3,11 @@
     .side_bar__user-name__area
       .side_bar__user-name__area__box
         %p.side_bar__user-name__area__box__text 
-          name
+          = current_user.name
         %p.side_bar__user-name__area__box__icon      
           = link_to new_group_path do
             = icon('far', 'edit')          
-          = link_to "#" do
+          = link_to destroy_user_session_path, method: :delete do
             = icon('fas', 'cog')            
   .side_bar__group-list
     - current_user.groups.each do |group|
