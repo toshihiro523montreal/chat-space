@@ -2,7 +2,7 @@ $(function(){
   function buildHTML(message){
   if ( message.image ) {
     var html =
-      `<div class="main_chat__message-list__message">
+      `<div class="main_chat__message-list__message"${message.id}>
         <div class="main_chat__message-list__message__header">
           <div class="main_chat__message-list__message__header__name">
             ${message.user_name}
@@ -54,16 +54,16 @@ $(function(){
     })
       .done(function(data){
         var html = buildHTML(data);
-        $('.main_chat__message-list').append(html);
+        $('.main_chat__message-list__message').append(html);
         $('form')[0].reset();
-        $('.main_chat__message-list').animate({ scrollTop: $('.main_chat__message-list')[0].scrollHeight});
+        $('.main_chat__message-list__message').animate({ scrollTop: $('.main_chat__message-list__message')[0].scrollHeight});
       })
         .fail(function() {
           alert('メッセージを送信できません');
         });
 });
   var reloadMessages = function() {
-    var last_message_id = $('.message:last').data("message-id");
+    var last_message_id = $('.main_chat__message-list__message:last').data("message-id");
     $.ajax({
       url: "api/messages",
       type: 'get',
@@ -76,8 +76,8 @@ $(function(){
         $.each(messages, function(i, message) {
           insertHTML += buildHTML(message)
         });
-        $('.messages').append(insertHTML);
-        $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+        $('.main_chat__message-list__message').append(insertHTML);
+        $('.main_chat__message-list__message').animate({ scrollTop: $('.main_chat__message-list__message')[0].scrollHeight});
       }
     })
     .fail(function() {

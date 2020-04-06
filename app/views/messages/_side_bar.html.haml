@@ -6,9 +6,9 @@
           = current_user.name
         %p.side_bar__user-name__area__box__icon      
           = link_to new_group_path do
-            = icon('far', 'edit')          
-          = link_to destroy_user_session_path, method: :delete do
-            = icon('fas', 'cog')            
+            = icon('fas', 'edit', class: 'icon')          
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'cog', class: 'icon')            
   .side_bar__group-list
     - current_user.groups.each do |group|
       = link_to group_messages_path(group.id) do
